@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+# cookbook 'chef-client'
+
+cookbook 'apache2'
+cookbook 'nginx'
+cookbook 'php-fpm'
+cookbook 'mysql'
+
+ cookbook 'php',
+   :git => 'https://github.com/priestjim/chef-php'
+ cookbook 'mariadb',
+   :git => 'https://github.com/MarcinKoziuk/chef-mariadb'
+ cookbook 'drush',
+   :git => 'https://github.com/msonnabaum/chef-drush'
+
+# cookbook 'postgresql',
+#   :git => 'https://github.com/findsyou/cookbooks',
+#   :ref => 'postgresql-improvements'
