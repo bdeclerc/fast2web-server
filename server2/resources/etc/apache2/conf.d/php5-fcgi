@@ -1,0 +1,9 @@
+<IfModule mod_fastcgi.c>
+        Alias /php5.fastcgi /usr/bin/php5-cgi
+        AddHandler php-script .php
+        FastCGIExternalServer /usr/bin/php5-cgi -socket /var/run/php-fpm-www.sock -idle-timeout 120
+        Action php-script /php5.fastcgi virtual
+
+
+</IfModule>
+
